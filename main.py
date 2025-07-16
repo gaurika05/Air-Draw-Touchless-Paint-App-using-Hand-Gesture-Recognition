@@ -127,6 +127,12 @@ class AirDraw:
     def release(self):
         self.cap.release()
 
+    def cleanup(self):
+        """Cleanup resources"""
+        if self.cap is not None:
+            self.cap.release()
+        cv2.destroyAllWindows()
+
 def initialize_air_draw():
     return AirDraw()
 
@@ -145,5 +151,4 @@ if __name__ == "__main__":
             elif key == ord('s'):  # Save drawing
                 air_draw.save_drawing()
     
-    air_draw.release()
-    cv2.destroyAllWindows() 
+    air_draw.cleanup() 
