@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Air Draw - Virtual Drawing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .video-container {
+            margin-top: 20px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .instructions {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Air Draw - Virtual Drawing</h1>
+        <div class="video-container">
+            <img src="{{ url_for('video_feed') }}" width="1280" height="720">
+        </div>
+        <div class="instructions">
+            <h2>Instructions:</h2>
+            <ul>
+                <li>Use your index finger to draw</li>
+                <li>Use index and middle fingers to select colors</li>
+                <li>Available colors: Blue, Green, Red, Yellow</li>
+                <li>Use the white box for eraser</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html> 
